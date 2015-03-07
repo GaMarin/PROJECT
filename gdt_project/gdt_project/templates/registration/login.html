@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% block title %}Login{% endblock %}
+{% block content %}
+<center><h2> SISTEMA DELUXE PROJECT MANAGER </h2></center><br>
+<center><h3> INICIO DE SESION </h3></center><br>
+<div class="login">
+     <form method="POST" action=".">
+           {% csrf_token %}
+           <center><table class="login">
+                {{form.as_table}}
+                <tr>
+                <td colspan="2" style="text-align:center; padding-top:10px;" ><input type="hidden" name="next" value="/principal" /><input type="submit" class= "btn btn-primary" value="Entrar" /><br></td>
+                </tr>
+           </table></center>
+     </form>
+</div>
+{% endblock %}
+
+~   
